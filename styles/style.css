@@ -1,6 +1,27 @@
+/* regular font */
+@import url('https://fonts.googleapis.com/css2?family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap');
+/* monospace font */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
 body {
   margin: 0;
   padding: 0;
+  font-family: "reddit sans";
+  color: rgb(235,235,235);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: black;
+  font-style: bold;
+}
+
+code {
+  display: inline;
+  font-family: 'jetbrains mono';
+  color: rgb(195,195,195);
+  background-color: rgb(225,225,225);
+  border: 1px solid rgb(175,175,175);
+  border-radius: 4px;
 }
 
 .mainContainer {

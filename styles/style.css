@@ -14,6 +14,7 @@ body {
   float: left;
   overflow-x: hidden;
   overflow-y: scroll;
+  min-height: 820px;
   max-width: 25%;
 }
 

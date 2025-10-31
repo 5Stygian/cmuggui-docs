@@ -15,7 +15,7 @@ body {
 /* sidebar */
 .mainContainer .sidebar {
   background-color: rgb(20,20,20);
-  border-right: 1px solid "white";
+  border-right: 1px solid white;
   float: left;
   overflow-x: hidden;
   overflow-y: scroll;
@@ -24,12 +24,12 @@ body {
 
 .mainContainer .sidebar ul {
   max-height: 30px;
-  border-top: 1px solid "white";
-  border-bottom: 1px solid "white";
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
 }
 
 .mainContainer .sidebar ul li {
-  color: "white";
+  color: white;
   margin: 6px 3px;
 }
 

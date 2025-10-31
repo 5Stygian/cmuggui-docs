@@ -36,6 +36,7 @@ code {
   position: fixed;
   overflow-x: hidden;
   overflow-y: scroll;
+  min-height: fit-content;
   max-width: 25%;
 }
 
@@ -78,7 +79,7 @@ code {
 
 /* main content */
 .mainContainer .mainContent {
-  float: left;
+  float: right;
 }
 
 .mainContainer .mainContent p {

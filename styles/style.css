@@ -35,7 +35,6 @@ code {
 /* sidebar */
 .mainContainer .sidebar {
   background-color: rgb(20,20,20);
-  border-right: 1px solid white;
   overflow-x: hidden;
   overflow-y: scroll;
   height: 100%;

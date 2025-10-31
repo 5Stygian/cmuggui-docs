@@ -33,6 +33,7 @@ code {
   background-color: rgb(20,20,20);
   border-right: 1px solid white;
   float: left;
+  position: sticky;
   overflow-x: hidden;
   overflow-y: scroll;
   min-height: 820px;
@@ -50,6 +51,30 @@ code {
   margin: 3px 0;
   border-top: 1px solid white;
   border-bottom: 1px solid white;
+}
+
+.mainContainer .sidebar ul li:hover {
+  filter: brightness(115%);
+}
+
+.mainContainer .sidebar ul li a:link {
+  text-decoration: none;
+  color: white;
+}
+
+.mainContainer .sidebar ul li a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+.mainContainer .sidebar ul li a:hover {
+  text-decoration: none;
+  filter: brightness(115%);
+}
+
+.mainContainer .sidebar ul li a:active {
+  text-decoration: none;
+  filter: brightness(115%);
 }
 
 /* main content */

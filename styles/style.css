@@ -15,6 +15,10 @@ h1, h2, h3, h4, h5, h6 {
   font-style: bold;
 }
 
+table, tbody, tr, th, td {
+  border-collapse: collapse;
+}
+
 code {
   display: inline;
   font-family: 'jetbrains mono';
@@ -32,11 +36,9 @@ code {
 .mainContainer .sidebar {
   background-color: rgb(20,20,20);
   border-right: 1px solid white;
-  float: left;
-  position: fixed;
   overflow-x: hidden;
   overflow-y: scroll;
-  height: fit-content;
+  height: 100%;
   max-width: 25%;
 }
 

@@ -45,7 +45,6 @@ code {
   padding: 0;
   max-height: 30px;
   list-style-type: none;
-  text-align: justify;
 }
 
 .mainContainer .sidebar ul li {
@@ -55,26 +54,26 @@ code {
   border-bottom: 1px solid white;
 }
 
-.mainContainer .sidebar ul li:hover {
+.mainContainer .sidebar li:hover {
   filter: brightness(115%);
 }
 
-.mainContainer .sidebar ul li a:link {
+.mainContainer .sidebar li a:link {
   text-decoration: none;
   color: white;
 }
 
-.mainContainer .sidebar ul li a:visited {
+.mainContainer .sidebar li a:visited {
   text-decoration: none;
   color: white;
 }
 
-.mainContainer .sidebar ul li a:hover {
+.mainContainer .sidebar li a:hover {
   text-decoration: none;
   filter: brightness(115%);
 }
 
-.mainContainer .sidebar ul li a:active {
+.mainContainer .sidebar li a:active {
   text-decoration: none;
   filter: brightness(115%);
 }

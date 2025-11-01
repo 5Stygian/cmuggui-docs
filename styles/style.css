@@ -22,7 +22,7 @@ table, tbody, tr, th, td {
 code {
   display: inline;
   font-family: 'jetbrains mono';
-  color: rgb(195,195,195);
+  color: rgb(34, 34, 34);
   background-color: rgb(225,225,225);
   border: 1px solid rgb(175,175,175);
   border-radius: 4px;
@@ -34,11 +34,16 @@ code {
 
 /* sidebar */
 .mainContainer .sidebar {
+  padding: 0 8px;
   background-color: rgb(20,20,20);
   overflow-x: hidden;
   overflow-y: scroll;
   height: 100%;
   max-width: 25%;
+}
+
+.mainContainer .sidebar hr {
+  width: 90%;
 }
 
 .mainContainer .sidebar ul {
@@ -47,11 +52,10 @@ code {
   list-style-type: none;
 }
 
-.mainContainer .sidebar ul li {
+.mainContainer .sidebar li {
   color: white;
-  margin: 3px 0;
-  border-top: 1px solid white;
-  border-bottom: 1px solid white;
+  margin: 10px 0;
+  padding: 5px 0;
 }
 
 .mainContainer .sidebar li:hover {
@@ -86,4 +90,24 @@ code {
 .mainContainer .mainContent p {
   margin: 0;
   padding: 0;
+}
+
+/* syntax highlighting */
+#highlight {
+  color: rgb(255,255,255);
+  padding: 6px !important;
+  background-color: #202020;
+  border-radius: 8px;
+}
+
+/* self, None, True, False */
+.kw1 {
+  color: #e28038;
+  font-weight: 600;
+}
+
+/* rest of the python keywords */
+.kw2 {
+  color: #45c23c;
+  font-weight: 600;
 }

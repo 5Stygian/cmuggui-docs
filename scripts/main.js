@@ -1,4 +1,4 @@
-// this code if from W3
+// this code is from W3
 const coll = document.getElementsByClassName("collapsible");
 
 for (let i = 0; i < coll.length; i++) {

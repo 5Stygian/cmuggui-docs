@@ -120,8 +120,9 @@ debug: bool = False)</code></pre>
           </ul>
           <hr>
           <h2 id="classes-colors">Colors</h2>
-          <button type="button" class="collapsible">Toggle Collapsible</button>
-          <br>
+          <p>Colors are accessed like this: <ilcode>Colors.COLOR_NAME</ilcode>. So, to access the gray color, you would do <ilcode>Colors.gray</ilcode>.</p>
+          <button type="button" class="collapsible">Toggle Colors</button>
+          <br><br>
           <div class="content">
             <table>
               <tr>
@@ -143,7 +144,40 @@ debug: bool = False)</code></pre>
             </table>
           </div>
           <h3 id="classes-colors-css3">Colors.CSS3</h3>
+          <p>This class defines the colors available in CSS3. They are the same as the colors defined by CMU Graphics, just accessed in a 
+          different way. To access them, do <ilcode>Colors.CSS3.COLOR_NAME</ilcode>. So, to access cornflower blue, you would do <ilcode>Colors.CSS3.cornflowerblue</ilcode>.
+          <br><br>A list of all CSS3 colors can be found here: <a href="https://www.w3schools.com/cssref/css_colors.php" target="_blank">CSS3 Color Names</a></p>
           <h3 id="classes-colors-debug">Colors.DEBUG</h3>
+          <p>These colors define the colors of the lines shown when the debug kwarg = True. While while it is possible to use and modify these colors, it is not recommended.</p>
+          <button type="button" class="collapsible">Toggle Colors</button>
+          <div class="content">
+            <table>
+              <tr>
+                <th>Name</th>
+                <th>Value</th>
+              </tr>
+              <tr>
+                <td>NORTHWEST_SOUTHEAST</td>
+                <td>rgb(255, 0, 255)</td>
+              </tr>
+              <tr>
+                <td>NORTHEAST_SOUTHWEST</td>
+                <td>rgb(255, 255, 0)</td>
+              </tr>
+              <tr>
+                <td>NORTH_SOUTH</td>
+                <td>rgb(255, 0, 0)</td>
+              </tr>
+              <tr>
+                <td>EAST_WEST</td>
+                <td>rgb(0, 128, 0)</td>
+              </tr>
+              <tr>
+                <td>BORDER</td>
+                <td>rgb(0, 0, 255)</td>
+              </tr>
+            </table>
+          </div>
         </td>
       </tr>
     </table>

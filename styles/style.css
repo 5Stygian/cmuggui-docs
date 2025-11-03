@@ -113,3 +113,12 @@ ilcode {
 .mainContainer .mainContent .content ul {
   list-style-type: none;
 }
+
+.mainContainer .mainContent .content table tbody {
+  border: 2px solid black;
+}
+
+.mainContainer .mainContent .content table tbody tr th,
+.mainContainer .mainContent .content table tbody tr td {
+  margin: 0 8px;
+}

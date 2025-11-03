@@ -43,7 +43,7 @@ ilcode {
   max-width: 25%;
 }
 
-.mainContainer .sidebar {
+.mainContainer .sidebar ul {
   padding: 0;
   max-height: 30px;
   list-style-type: none;

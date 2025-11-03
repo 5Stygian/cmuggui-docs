@@ -91,23 +91,4 @@ code {
   margin: 0;
   padding: 0;
 }
-
-/* syntax highlighting */
-#highlight {
-  color: rgb(255,255,255);
-  padding: 6px !important;
-  background-color: #202020;
-  border-radius: 8px;
-}
-
-/* self, None, True, False */
-.kw1 {
-  color: #e28038;
-  font-weight: 600;
-}
-
-/* rest of the python keywords */
-.kw2 {
-  color: #45c23c;
-  font-weight: 600;
 }

@@ -109,3 +109,7 @@ ilcode {
 .mainContainer .mainContent .content {
   display: none;
 }
+
+.mainContainer .mainContent .content ul {
+  list-style-type: none;
+}

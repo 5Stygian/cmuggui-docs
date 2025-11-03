@@ -1,14 +1,14 @@
-const collButton = document.getElementById("collapsibleButton");
-const collCont = document.getElementById("collapsibleContent");
-let isCollapsed = true;
-collButton.addEventListener("click", function() {
-  isCollapsed = !isCollapsed;
-  if (isCollapsed == false) {
-    collCont.style.display = block;
-    collButton.innerHTML = "Show";
-  }
-  if (isCollapsed == true) {
-    collCont.style.display = none;
-    collButton.innerHTML = "Hide";
-  }
-});
+// this code if from W3
+const coll = document.getElementsByClassName("collapsible");
+
+for (let i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    let content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}

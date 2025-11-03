@@ -98,7 +98,8 @@ ilcode {
 
 .mainContainer .mainContent .collapsible {
   color: rgb(20,20,20);
-  background-color: rgb(225,225,225)
+  background-color: rgb(225,225,225);
+  font-size: 14px;
 }
 
 .mainContainer .mainContent .collapsible:hover {

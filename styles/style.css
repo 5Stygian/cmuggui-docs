@@ -107,7 +107,6 @@ ilcode {
 }
 
 .mainContainer .mainContent .content {
-  display: none;
 }
 
 .mainContainer .mainContent .content table tbody {
@@ -115,9 +114,7 @@ ilcode {
   padding: 4px;
 }
 
-/*
 .mainContainer .mainContent .content table tbody tr th,
 .mainContainer .mainContent .content table tbody tr td {
   padding: 0 8px;
 }
-*/

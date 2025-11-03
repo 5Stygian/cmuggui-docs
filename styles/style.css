@@ -51,6 +51,8 @@ ilcode {
   padding: 0;
   max-height: 30px;
   list-style-type: none;
+  top: 0;
+  position: sticky;
 }
 
 .mainContainer .sidebar li {

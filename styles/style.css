@@ -106,6 +106,10 @@ ilcode {
   filter: brightness(120%);
 }
 
+.mainContainer .mainContent .content {
+  display: none;
+}
+
 .mainContainer .mainContent .content table tbody {
   border: 2px solid black;
   padding: 2px;

@@ -93,6 +93,9 @@ ilcode {
   padding: 0;
 }
 
+/*
+ * uncommenting this will cause raw html to be rendered for some reason
 .mainContainer .mainContent code[data-language] {
   border-radius: 8px;
 }
+*/

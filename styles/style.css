@@ -48,7 +48,7 @@ ilcode {
   max-height: 30px;
   list-style-type: none;
   top: 0;
-  position: sticky;
+  position: absolute;
 }
 
 .mainContainer .sidebar ul hr {

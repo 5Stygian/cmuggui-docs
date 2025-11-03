@@ -110,15 +110,12 @@ ilcode {
   display: none;
 }
 
-.mainContainer .mainContent .content ul {
-  list-style-type: none;
-}
-
 .mainContainer .mainContent .content table tbody {
   border: 2px solid black;
+  padding: 4px;
 }
 
 .mainContainer .mainContent .content table tbody tr th,
 .mainContainer .mainContent .content table tbody tr td {
-  margin: 0 8px;
+  padding: 0 8px;
 }

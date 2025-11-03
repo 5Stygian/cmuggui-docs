@@ -1,11 +1,14 @@
-const collapsible = document.getElementById("collapsible");
-const collapsibleInner = collapsible.innerHTML;
-let isCollapsed = false;
-collapsible.addEventListener("click", function() {
+const collButton = document.getElementById("collapsibleButton");
+const collCont = document.getElementById("collapsibleContent");
+let isCollapsed = true;
+collButton.addEventListener("click", function() {
+  isCollapsed = !isCollapsed;
   if (isCollapsed == false) {
-    collapsibleInner.style.display = block;  
+    collCont.style.display = block;
+    collButton.innerHTML = "Show";
   }
   if (isCollapsed == true) {
-    collapsibleInner.style.display = none;
+    collCont.style.display = none;
+    collButton.innerHTML = "Hide";
   }
 });

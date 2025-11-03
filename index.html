@@ -39,8 +39,20 @@
           <hr>
           <h1 id="classes">Classes</h1>
           <h2 id="classes-menu">Menu</h2>
-          <pre><code data-language="python" style="font-size:14px;">def foo():
-  print("bar")</code></pre>
+          <pre><code data-language="python" style="font-size:14px;">Menu(*args, fill=Colors.gray, border=Colors.darkerGray, debug: bool = False, **kwargs):</code></pre>
+          <p>The <ilcode>Menu</ilcode> class subclasses the <ilcode>Rect</ilcode> class from CMU Graphics. 
+          This means that normal <ilcode>Rect</ilcode> arguments like <ilcode>left</ilcode> and <ilcode>top</ilcode> 
+          are still passed.</p>
+          <h4>Args</h4>
+          <ul>
+            <li>fill: the color of the background.</li>
+            <li>border: the color of the border.</li>
+            <li>debug: when True, lines are drawn that show alignment and where the border is. Useful if <ilcode>fill</ilcode> and <ilcode>border</ilcode> are invisible. This also automatically calls the <ilcode>getData()</ilcode> method.</li>
+          </ul>
+          <h4>Methods</h4>
+          <ul>
+            <li>getData(): returns a <ilcode>Dict</ilcode> containing data about the object.</li>
+          </ul>
           <h3 id="classes-menu-button">Menu.Button</h3>
           <hr>
           <h2 id="classes-functions">Functions</h2>

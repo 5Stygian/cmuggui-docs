@@ -26,7 +26,7 @@ ilcode {
   background-color: rgb(225,225,225);
   border: 1px solid rgb(175,175,175);
   border-radius: 4px;
-  padding: 0 1px 0 1px;
+  padding: 0 1.5px 0 1.5px;
 }
 
 .mainContainer {
@@ -93,9 +93,6 @@ ilcode {
   padding: 0;
 }
 
-.mainContainer .mainContent .codebox {
-  color: rgb(255,255,255);
-  background-color: rgb(32,32,32);
-  padding: 6px !important;
+.mainContainer .mainContent code[data-language] {
   border-radius: 8px;
 }

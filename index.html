@@ -33,9 +33,9 @@
         </td>
         <td class="mainContent">
           <h1 id="introduction">Introduction</h1>
-          <p>cmuggui is a library for building GUIs in CMU Graphics.</p>
+          <p><ilcode>cmuggui</ilcode> is a library for building GUIs in CMU Graphics.</p>
           <h1 id="install">Install</h1>
-          <p>To install, run <ilcode>pip install cmuggui</ilcode> in the command line.</p>
+          <p>To install, run <ilcode>pip install cmuggui</ilcode> in the command line. If you prefer, you can clone the repository <a href="https://github.com/5Stygian/cmuggui/tree/main/" target="_blank">here</a>.</p>
           <hr>
           <h1 id="classes">Classes</h1>
           <h2 id="classes-menu">Menu</h2>
@@ -110,20 +110,43 @@ debug: bool = False)</code></pre>
           <h4>Functions.rotate(object, degrees, origin="object_Center", originX=None, originY=None)</h4>
           <p>Rotates the object that is passed based on an origin.</p>
           <h5>Possible Origins</h5>
-          <ul>
-            <li>"origin_Center": the center of the object.</li>
-            <li>"origin_TopLeft": the top left coordinate of the object.</li>
-            <li>"origin_TopRight": the top right coordinate of the object.</li>
-            <li>"origin_BottomLeft": the bottom left coordinate of the object.</li>
-            <li>"origin_BottomRight": the bottom right coordinate of the object.</li>
-            <li>"origin_Custom": a custom coordinate to rotate the object around.</li>
-          </ul>
+          <table>
+            <tr>
+              <th>Origin</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td>"origin_Center" (default)</td>
+              <td>The center of the object.</td>
+            </tr>
+            <tr>
+              <td>"origin_TopLeft"</td>
+              <td>The top left coordinate of the object.</td>
+            </tr>
+            <tr>
+              <td>"origin_TopRight"</td>
+              <td>The top right coordinate of the object.</td>
+            </tr>
+            <tr>
+              <td>"origin_BottomLeft"</td> <!--bl???-->
+              <td>The bottom left coordinate of the object.</td>
+            </tr>
+            <tr>
+              <td>"origin_BottomRight"</td>
+              <td>The bottom right coordinate of the object.</td>
+            </tr>
+            <tr>
+              <td>"origin_Custom"</td>
+              <td>A custom coordinate to rotate the object around.</td>
+            </tr>
+          </table>
           <hr>
           <h2 id="classes-colors">Colors</h2>
           <p>Colors are accessed like this: <ilcode>Colors.COLOR_NAME</ilcode>. So, to access the gray color, you would do <ilcode>Colors.gray</ilcode>.</p>
+          <br>
           <button type="button" class="collapsible">Toggle Colors</button>
           <div class="content">
-            <br><br>
+            <br>
             <table>
               <tr>
                 <th>Name</th>
@@ -149,9 +172,10 @@ debug: bool = False)</code></pre>
           <br><br>A list of all CSS3 colors can be found here: <a href="https://www.w3schools.com/cssref/css_colors.php" target="_blank">CSS3 Color Names</a></p>
           <h3 id="classes-colors-debug">Colors.DEBUG</h3>
           <p>These colors define the colors of the lines shown when the debug kwarg = True. While while it is possible to use and modify these colors, it is not recommended.</p>
+          <br>
           <button type="button" class="collapsible">Toggle Colors</button>
           <div class="content">
-            <br><br>
+            <br>
             <table>
               <tr>
                 <th>Name</th>
@@ -179,7 +203,7 @@ debug: bool = False)</code></pre>
               </tr>
             </table>
           </div>
-          <br><br>
+          <br><br><br>
         </td>
       </tr>
     </table>

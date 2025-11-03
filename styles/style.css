@@ -88,7 +88,7 @@ ilcode {
 /* main content */
 .mainContainer .mainContent {
   padding-left: 6px;
-  max-width: 75%;
+  padding-right: 12px;
 }
 
 .mainContainer .mainContent p {
@@ -110,13 +110,13 @@ ilcode {
   display: none;
 }
 
-.mainContainer .mainContent .content table tbody {
+.mainContainer .mainContent table tbody {
   border: 2px solid black;
   padding: 2px;
 }
 
-.mainContainer .mainContent .content table tbody tr th,
-.mainContainer .mainContent .content table tbody tr td {
+.mainContainer .mainContent table tbody tr th,
+.mainContainer .mainContent table tbody tr td {
   padding: 2px 8px;
 }
 
@@ -124,8 +124,30 @@ ilcode {
 .attribution {
   color: rgb(235,235,235);
   background-color: rgb(20,20,20);
-  font-size: 10px;
+  font-size: 12px;
+  padding: 4px 0 4px 48px;
   bottom: 0;
   left: 0;
   position: fixed;
+  width: 100%;
+}
+
+.attribution a:link {
+  text-decoration: none;
+  color: rgb(26,190,215);
+}
+
+.attribution a:visited {
+  text-decoration: none;
+  color: rgb(17,143,163);
+}
+
+.attribution a:hover {
+  text-decoration: none;
+  filter: brightness(90%);
+}
+
+.attribution a:active {
+  text-decoration: none;
+  filter: brightness(115%);
 }

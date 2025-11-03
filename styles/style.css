@@ -93,6 +93,6 @@ ilcode {
   padding: 0;
 }
 
-.mainContainer .mainContent code[data-language="python"] {
+.mainContainer .mainContent .codebox {
   border-radius: 8px !important;
 }

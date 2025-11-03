@@ -43,7 +43,7 @@
           <p>The <ilcode>Menu</ilcode> class subclasses the <ilcode>Rect</ilcode> class from CMU Graphics. 
           This means that normal <ilcode>Rect</ilcode> arguments like <ilcode>left</ilcode> and <ilcode>top</ilcode> 
           are still passed.</p>
-          <h4>Args</h4>
+          <h4>Keyword Arguments</h4>
           <ul>
             <li>fill: the color of the background.</li>
             <li>border: the color of the border.</li>
@@ -60,6 +60,42 @@ width: int|float, height: int|float, fill = Colors.darkgray, borderFill = Colors
 textValue: str = "", textFill = "black", textFont: str = "arial", textSize: int|float = 12,
 textIsBold: bool = False, textIsItalic: bool = False, textIsVisible: bool = True,
 debug: bool = False)</code></pre>
+          <p>This class does not subclass a CMU Graphics class, meaning instances of it cannot be added into a CMU Graphics <ilcode>Group</ilcode>.</p>
+          <h4>Arguments</h4>
+          <ul>
+            <li>parent: a <ilcode>Menu</ilcode> object.</li>
+            <li>onclick: the name of a Python function.</li>
+            <li>horizontalAlign: the <ilcode>left</ilcode> of the button in relation to the parents <ilcode>centerX</ilcode> property.</li>
+            <li>verticalAlign: the <ilcode>top</ilcode> of the button in relation to the parents <ilcode>top</ilcode> property. </li>
+            <li>width: the width of the button.</li>
+            <li>height: the height of the button.</li>
+          </ul>
+          <h4>Keyword Arguments</h4>
+          <ul>
+            <li>fill: the color of the buttons background.</li>
+            <li>borderFill: the color of the buttons border.</li>
+            <li>borderWidth: the width of the buttons border.</li>
+            <li>textValue: the text displayed on the button.</li>
+            <li>textFill: the color of the text.</li>
+            <li>textFont: the font of the text.</li>
+            <li>textSize: the size of the text.</li>
+            <li>textIsBold: whether or not the text should be bold.</li>
+            <li>textIsItalic: whether or not the text should be italic.</li>
+            <li>textIsVisible: whether or not the text should be visible.</li>
+            <li>debug: when True, lines are drawn that show alignment and where the border is. Useful if <ilcode>fill</ilcode> and <ilcode>border</ilcode> are invisible. This also automatically calls the <ilcode>getData()</ilcode> method.</li>
+          </ul>
+          <h4>Methods</h4>
+          <ul>
+            <li>getData(): returns a <ilcode>Dict</ilcode> containing data about the object.</li>
+          </ul>
+          <h4>Event Listeners</h4>
+          <pre><code data-language="python" style="font-size:14px;">addEventListener(x, y, event: str = "mouseDown")</code></pre>
+          <p>Event listeners are defined inside of the <ilcode>onMousePress</ilcode> function from CMU Graphics.
+          When an event listener is defined, they must take <ilcode>x</ilcode> and <ilcode>y</ilcode>. Do 
+          not pass anything for the <ilcode>event</ilcode> argument. It will cause an error. An example is shown below.</p>
+          <pre><code data-language="python" style="font-size:14px;">def onMousePress(x, y):
+  buttonObject.addEventListener(x, y)
+  # buttonObject.addEventListener(x, y, event="mouseUp") # this will cause an error</code></pre>
           <hr>
           <h2 id="classes-functions">Functions</h2>
           <hr>

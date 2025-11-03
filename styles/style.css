@@ -43,10 +43,6 @@ ilcode {
   max-width: 25%;
 }
 
-.mainContainer .sidebar hr {
-  width: 90%;
-}
-
 .mainContainer .sidebar ul {
   padding: 0;
   max-height: 30px;
@@ -55,32 +51,36 @@ ilcode {
   position: sticky;
 }
 
-.mainContainer .sidebar li {
+.mainContainer .sidebar ul hr {
+  width: 90%;
+}
+
+.mainContainer .sidebar ul li {
   color: white;
   margin: 10px 0;
   padding: 5px 0;
 }
 
-.mainContainer .sidebar li:hover {
-  filter: brightness(115%);
+.mainContainer .sidebar ul li:hover {
+  filter: brightness(90%);
 }
 
-.mainContainer .sidebar li a:link {
+.mainContainer .sidebar ul li a:link {
   text-decoration: none;
   color: white;
 }
 
-.mainContainer .sidebar li a:visited {
+.mainContainer .sidebar ul li a:visited {
   text-decoration: none;
   color: white;
 }
 
-.mainContainer .sidebar li a:hover {
+.mainContainer .sidebar ul li a:hover {
   text-decoration: none;
-  filter: brightness(115%);
+  filter: brightness(90%);
 }
 
-.mainContainer .sidebar li a:active {
+.mainContainer .sidebar ul li a:active {
   text-decoration: none;
   filter: brightness(115%);
 }

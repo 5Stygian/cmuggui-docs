@@ -7,8 +7,10 @@ for (let i = 0; i < coll.length; i++) {
     let content = this.nextElementSibling;
     if (content.style.display === "block") {
       content.style.display = "none";
+      coll.innerHTML = "Show";
     } else {
       content.style.display = "block";
+      coll.innerHTML = "Hide";
     }
   });
 }

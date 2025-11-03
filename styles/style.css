@@ -96,3 +96,15 @@ ilcode {
   padding: 0;
 }
 
+.mainContainer .mainContent .collapsible {
+  color: rgb(20,20,20);
+  background-color: rgb(225,225,225)
+}
+
+.mainContainer .mainContent .collapsible:hover {
+  filter: brightness(120%);
+}
+
+.mainContainer .mainContent .content {
+  display: none;
+}

@@ -86,6 +86,7 @@ ilcode {
 /* main content */
 .mainContainer .mainContent {
   padding-left: 6px;
+  max-width: 75%;
 }
 
 .mainContainer .mainContent p {

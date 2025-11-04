@@ -29,6 +29,8 @@
             <li><a href="#classes-colors-css3">Colors.CSS3</a></li>
             <li><a href="#classes-colors-debug">Colors.DEBUG</a></li>
             <hr>
+            <li><a href="#example">Example</a></li>
+            <hr>
           </ul>
         </td>
         <td class="mainContent">
@@ -204,6 +206,43 @@ debug: bool = False)</code></pre>
               </tr>
             </table>
           </div>
+          <h2 id="#example">Example</h2>
+          <pre><code data-language="python" style="font-size:14px;">from cmu_graphcs import *
+from cmuggui import *
+
+def start():
+  print("program started")
+
+exampleMenu = Menu(
+  0, 0,
+  133, 400,
+  fill=Colors.CSS3.lightsteelblue,
+  border=Colors.CSS3.lightslategray,
+  borderWidth=3
+)
+
+exampleButton = Menu.Button(
+  exampleMenu,
+  start,
+  -20, 10,
+  40, 30,
+  textValue="Play"
+)
+
+quitButton = Menu.Button(
+  exampleMenu,
+  Functions.QUIT,
+  -10, 365,
+  30, 10,
+  textValue="Quit",
+  textSize=10
+)
+
+def onMousePress(x, y):
+  exampleButton.addEventListener(x, y)
+  quitButton.addEventListener(x, y)
+
+cmu_graphics.run()</code></pre>
           <br><br><br>
         </td>
       </tr>

@@ -99,6 +99,7 @@ ilcode {
 
 .mainContainer .mainContent hr {
   width: 85%;
+  margin: 12px 0;
 }
 
 .mainContainer .mainContent .collapsible {

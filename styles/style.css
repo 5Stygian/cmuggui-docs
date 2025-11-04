@@ -126,10 +126,7 @@ ilcode {
   color: rgb(235,235,235);
   background-color: rgb(20,20,20);
   font-size: 14px;
-  padding: 4px 0 4px 64px;
-  bottom: 0;
-  left: 0;
-  position: fixed;
+  padding: 6px 0 6px 64px;
   width: 100%;
 }
 

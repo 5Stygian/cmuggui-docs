@@ -41,28 +41,29 @@ ilcode {
   overflow-y: scroll;
   height: 100%;
   max-width: 25%;
+  vertical-align: top;
 }
 
 .mainContainer .sidebar ul {
-  padding: 0;
-  max-height: 30px;
+  padding: 10px 0;
   list-style-type: none;
   top: 0;
+  left: 0;
   position: sticky;
 }
 
 .mainContainer .sidebar ul hr {
-  width: 90%;
+  width: 85%;
 }
 
 .mainContainer .sidebar ul li {
   color: white;
-  margin: 10px 0;
-  padding: 5px 0;
+  margin: 15px 0;
 }
 
 .mainContainer .sidebar ul li:hover {
   filter: brightness(90%);
+  text-shadow: 0 0 4px rgba(245,245,245,0.41);
 }
 
 .mainContainer .sidebar li a:link {
@@ -124,8 +125,8 @@ ilcode {
 .attribution {
   color: rgb(235,235,235);
   background-color: rgb(20,20,20);
-  font-size: 12px;
-  padding: 4px 0 4px 48px;
+  font-size: 14px;
+  padding: 4px 0 4px 64px;
   bottom: 0;
   left: 0;
   position: fixed;

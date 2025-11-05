@@ -40,7 +40,7 @@ ilcode {
   overflow-x: hidden;
   overflow-y: scroll;
   height: 100%;
-  max-width: 25%;
+  width: 20%;
   vertical-align: top;
 }
 

@@ -37,7 +37,8 @@
           <h1 id="introduction">Introduction</h1>
           <p><ilcode>cmuggui</ilcode> is a library for building GUIs in CMU Graphics.</p>
           <h2 id="install">Install</h2>
-          <p>To install, run <ilcode>pip install cmuggui</ilcode> in the command line. If you prefer, you can clone the repository <a href="https://github.com/5Stygian/cmuggui/tree/main/" target="_blank">here</a>.</p>
+          <p>To install, run <ilcode>pip install cmuggui</ilcode> in the command line. If you prefer, 
+          you can clone the repository <a href="https://github.com/5Stygian/cmuggui/tree/main/" target="_blank">here</a>.</p>
           <hr>
           <h1 id="classes">Classes</h1>
           <h2 id="classes-menu">Menu</h2>
@@ -51,38 +52,48 @@
           <p>When True, lines are drawn that show alignment and where the border is. This is useful if 
           <ilcode>fill</ilcode> and <ilcode>border</ilcode> are invisible, or you need guidelines to help align elements. 
           This also automatically calls the <ilcode>getData()</ilcode> method.</p>
-          <h4>Methods</h4>
-          <ul>
-            <li>getData(): returns a <ilcode>Dict</ilcode> containing data about the object.</li>
-          </ul>
+          <h3>Methods</h3>
+          <h4>getData()</h4>
+          <p>Returns a <ilcode>Dict</ilcode> containing data about the object.</p>
+          <button type="button" class="collapsible">Toggle data structure</button>
+          <div class="content">
+            <pre><code data-language="json" style="font-size:14px;">{
+    "Class": f"{self.__class__.__name__}",
+    "Debug": self.debug,
+    "Dimensions": {
+        "TopLeft": (self.left, self.top),
+        "TopRight": (self.right, self.top),
+        "BottomLeft": (self.left, self.bottom),
+        "BottomRight": (self.right, self.bottom),
+        "Width": self.width,
+        "Height": self.height,
+        "Center": (self.centerX, self.centerY)
+    },
+    "BackgroundFill": self.fill,
+    "BorderFill": self.border,
+    "BorderWidth": self.borderWidth,
+    "IsVisible": self.visible
+}</code></pre>
+          </div>
           <h2 id="classes-menu-button">Menu.Button</h2>
-          <pre><code data-language="python" style="font-size:14px;">Menu.Button(parent, onclick,
-horizontalAlign: int|float, verticalAlign: int|float,
-width: int|float, height: int|float, fill = Colors.darkgray, borderFill = Colors.darkerGray, borderWidth: int|float = 2,
-textValue: str = "", textFill = "black", textFont: str = "arial", textSize: int|float = 12,
+          <pre><code data-language="python" style="font-size:14px;">Menu.Button(parent, *args, 
+textValue: str = "", textFill = rgb(0,0,0), textSize: int|float = 12.0, textFont: str = "arial", textOpacity: int|float = 100,
 textIsBold: bool = False, textIsItalic: bool = False, textIsVisible: bool = True,
-debug: bool = False)</code></pre>
-          <p>This class does not subclass a CMU Graphics class, meaning instances of it cannot be added into a CMU Graphics <ilcode>Group</ilcode>.</p>
+debug: bool = False, **kwargs)</code></pre>
+          <p>Buttons are automatically aligned to the center of their parent Menu.</p>
           <h3>Arguments</h3>
           <h4>parent</h4>
           <p>A <ilcode>Menu</ilcode> object.</p>
-          <h4>onclick</h4>
-          <p>The name of a python function. Do not use parenthesis, this will call the function.</p>
-          <h4>horizontalAlign</h4>
-          <p>The <ilcode>left</ilcode> of the button in relation to the parents <ilcode>centerX</ilcode> property.</p>
-          <h4>verticalAlign</h4>
-          <p>The <ilcode>top</ilcode> of the button in relation to the parents <ilcode>top</ilcode> property.</p>
-          <h4>width</h4>
-          <p>The width of the button.</p>
-          <h4>height</h4>
-          <p>The height of the button.</p>
+          <h4>*args</h4>
+          <p>These are treated mostly the same as they would be if this were a regualr Rect, 
+          aside from <ilcode>left</ilcode> and <ilcode>top</ilcode>.</p>
+          <ul>
+            <li><strong>Left:</strong> Places the button in relation to the value of its parent menus 
+            <ilcode>left</ilcod> value, instead of placing it in relation to the <ilcode>app</ilcode> window.</li>
+            <li><strong>Top:</strong> Places the button in relation to the value of its parent menus 
+            <ilcode>top</ilcod> value, instead of placing it in relation to the <ilcode>app</ilcode> window.</li>
+          </ul>
           <h3>Keyword Arguments</h3>
-          <h4>fill</h4>
-          <p>The color of the buttons background.</p>
-          <h4>borderFill</h4>
-          <p>The color of the buttons border.</p>
-          <h4>borderWidth</h4>
-          <p>The width of the buttons border.</p>
           <h4>textValue</h4>
           <p>The text displayed on the button.</p>
           <h4>textFill</h4>
@@ -95,6 +106,8 @@ debug: bool = False)</code></pre>
           <p>Whether or not the text should be bold.</p>
           <h4>textIsItalic</h4>
           <p>Whether or not the text should be italic.</p>
+          <h4>textOpacity</h4>
+          <p>The opacity of the text.</p>
           <h4>textIsVisible</h4>
           <p>Whether or not the text should be visible.</p>
           <h4>debug</h4>
@@ -104,14 +117,62 @@ debug: bool = False)</code></pre>
           <h3>Methods</h3>
           <h4>getData()</h4>
           <p>Returns a <ilcode>Dict</ilcode> containing data about the object.</p>
+          <button type="button" class="collapsible">Toggle data structure</button>
+          <div class="content">
+            <pre><code data-language="json" style="font-size:14px;">{
+    "Class": f"{self.__class__.__name__}",
+    "Parent": f"{self.parent}",
+    "Debug": self.debug,
+    "OnClickFunction": f"{self.onclick}",
+    "HasEventListener": self.hasEventListener,
+    "BoundingBox": {
+        "Dimensions": {
+            "TopLeft": (self.left, self.top),
+            "TopRight": (self.right, self.top),
+            "BottomLeft": (self.left, self.bottom),
+            "BottomRight": (self.right, self.bottom),
+            "Width": self.width,
+            "Height": self.height,
+            "Center": (self.centerX, self.centerY)
+        },
+        "BackgroundFill": self.fill,
+        "BorderFill": self.border,
+        "BorderWidth": self.borderWidth,
+        "Opacity": self.opacity,
+        "IsVisible": self.visible
+    },
+    "Text": {
+        "Dimensions": {
+            "TopLeft": (self.text.left, self.text.top),
+            "TopRight": (self.text.right, self.text.top),
+            "BottomLeft": (self.text.left, self.text.bottom),
+            "BottomRight": (self.text.right, self.text.bottom),
+            "Width": self.text.width,
+            "Height": self.text.height,
+            "Center": (self.text.centerX, self.text.centerY),
+        },
+        "Value": self.text.value,
+        "Fill": self.text.fill,
+        "Font": self.text.font,
+        "Size": self.text.size,
+        "IsBold": self.text.bold,
+        "IsItalic": self.text.italic,
+        "Opacity": self.text.opacity,
+        "IsVisible": self.text.visible
+    }
+}</code></pre>
+          </div>
           <h3>Event Listeners</h3>
-          <pre><code data-language="python" style="font-size:14px;">addEventListener(x, y, event: str = "mouseDown")</code></pre>
+          <pre><code data-language="python" style="font-size:14px;">addEventListener(x, y, onclick = None, event: str = "mouseDown")</code></pre>
           <p>Event listeners are defined inside of the <ilcode>onMousePress</ilcode> function from CMU Graphics.
           When an event listener is defined, they must take <ilcode>x</ilcode> and <ilcode>y</ilcode> as arguments. Do 
           not pass anything for the <ilcode>event</ilcode> argument. It will cause an error. An example is shown below.</p>
+          <h4>onclick</h4>
+          <p>The name of a function without parenthesis. Adding parenthesis to the function will call the function.
+          If no function is passed, it will raise a <ilcode>TypeError</ilcode>.</p>
           <br>
           <pre><code data-language="python" style="font-size:14px;">def onMousePress(x, y):
-  buttonObject.addEventListener(x, y)</code></pre>
+  buttonObject.addEventListener(x, y, onclick=FUNC_TO_CALL)</code></pre>
           <hr>
           <h2 id="classes-functions">Functions</h2>
           <p>This class defines utiity functions.</p>
@@ -240,7 +301,6 @@ exampleMenu = Menu(
 
 exampleButton = Menu.Button(
   exampleMenu,
-  start,
   -20, 10,
   40, 30,
   textValue="Play"
@@ -248,7 +308,6 @@ exampleButton = Menu.Button(
 
 quitButton = Menu.Button(
   exampleMenu,
-  Functions.QUIT,
   -10, 365,
   30, 10,
   textValue="Quit",
@@ -256,8 +315,8 @@ quitButton = Menu.Button(
 )
 
 def onMousePress(x, y):
-  exampleButton.addEventListener(x, y)
-  quitButton.addEventListener(x, y)
+  exampleButton.addEventListener(x, y, onclick=start)
+  quitButton.addEventListener(x, y, onclick=Functions.QUIT)
 
 cmu_graphics.run()</code></pre>
           <br><br>

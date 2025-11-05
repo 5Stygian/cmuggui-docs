@@ -83,9 +83,9 @@
           </div>
           <h2 id="classes-menu-button">Menu.Button</h2>
           <pre><code data-language="python" style="font-size:14px;">Menu.Button(parent, *args, 
-textValue: str = "", textFill = rgb(0,0,0), textSize: int|float = 12.0, textFont: str = "arial", textOpacity: int|float = 100,
-textIsBold: bool = False, textIsItalic: bool = False, textIsVisible: bool = True,
-debug: bool = False, **kwargs)</code></pre>
+textValue = "", textFill = rgb(0,0,0), textSize = 12.0, textFont = "arial", textOpacity = 100,
+textIsBold = False, textIsItalic = False, textIsVisible = True,
+debu = False, **kwargs)</code></pre>
           <p>Buttons are automatically aligned to the center of their parent Menu.</p>
           <h3>Arguments</h3>
           <h4>parent</h4>
@@ -171,7 +171,7 @@ debug: bool = False, **kwargs)</code></pre>
 }</code></pre>
           </div>
           <h3>Event Listeners</h3>
-          <pre><code data-language="python" style="font-size:14px;">addEventListener(x, y, onclick = None, event: str = "mouseDown")</code></pre>
+          <pre><code data-language="python" style="font-size:14px;">addEventListener(x, y, onclick = None, event = "mouseDown")</code></pre>
           <p>Event listeners are defined inside of the <ilcode>onMousePress</ilcode> function from CMU Graphics.
           When an event listener is defined, they must take <ilcode>x</ilcode> and <ilcode>y</ilcode> as arguments. Do 
           not pass anything for the <ilcode>event</ilcode> argument. It will cause an error. An example is shown below.</p>

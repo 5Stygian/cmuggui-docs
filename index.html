@@ -251,7 +251,7 @@ debu = False, **kwargs)</code></pre>
           to work properly. This function only modifies the <ilcode>fill</licode> and <ilcode>border</ilcode> properties
           of the button.</p>
           <br>
-          <pre><code data-language="python" style="font-size:14px;">from cmu_graphcis import *
+          <pre><code data-language="python" style="font-size:14px;">from cmu_graphics import *
 
 app.hovering = 0
 
@@ -280,8 +280,8 @@ def onMouseMove(x, y):
     app.hovering += 1
     Functions.hover(exampleButton, mode="lighen", lighenModAmount=1.3)
   else:
-    exampleButton.fill = rgb(*exampleButtonData["BoundingBox"]["BackgroundFill"])
-    exampleButton.border = rgb(*exampleButtonData["BoundingBox"]["BorderFill"])
+    exampleButton.fill = exampleButtonData["BoundingBox"]["BackgroundFill"]
+    exampleButton.border = exampleButtonData["BoundingBox"]["BorderFill"]
     app.hovering = 0
 
 cmu_graphics.run()</code></pre>
@@ -291,17 +291,6 @@ cmu_graphics.run()</code></pre>
           the function that something is being hovered. Then, the function makes the <ilcdoe>fill</ilcdoe> and <ilcode>border</ilcode> 
           ligher. In the <ilcode>else</ilcode> block, we set the modified properties back to their 
           original state and tell the app that the button is no longer being hovered.</p>
-          <br>
-          <p><strong>Note</strong>: the star (*) is the Python <a href="https://www.geeksforgeeks.org/python/packing-and-unpacking-arguments-in-python/#:~:text=Unpacking%20a%20List/Tuple%20with%20*" target="_blank">unpacking operator</a>.
-          Essentially, it turns an iterable (like a list or tuple) into its individual elements like this:</p>
-          <br>
-          <pre><code data-language="python" style="font-size:14px;">myAwesomeColor = rgb(45, 90, 135)
-myAwesomeColor_red, myAwesomeColor_green, myAwesomeColor_blue = *myAwesomeColor
-print(f"red: {myAwesomeColor_red}\ngreen: {myAwesomeColor_green}\nblue: {myAwesomeColor_blue}")
-# output
-# red: 45
-# green: 90
-# blue: 135</code></pre>
           <hr>
           <h2 id="classes-colors">Colors</h2>
           <p>Colors are accessed like this: <ilcode>Colors.COLOR_NAME</ilcode>. So, to access the 

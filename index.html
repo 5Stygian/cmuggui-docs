@@ -191,19 +191,19 @@ debu = False, **kwargs)</code></pre>
           <hr>
           <h2 id="classes-functions">Functions</h2>
           <p>This class defines utiity functions.</p>
-          <h4>Functions.NOFUNCTION()</h4>
+          <h3>Functions.NOFUNCTION()</h3>
           <p>A function that does nothing.</p>
-          <h4>Functions.QUIT()</h4>
+          <h3>Functions.QUIT()</h3>
           <p>Quits the program using <ilcode>sys.exit(0)</ilcode>.</p>
-          <h4>Functions.QQUIT()</h4>
+          <h3>Functions.QQUIT()</h3>
           <p>Quits the program by raising a <ilcode>KeyboardInterrupt</ilcode>.</p>
-          <h4>Functions.toggleVisibility(object)</h4>
+          <h3>Functions.toggleVisibility(object)</h3>
           <p>Toggles the visibilty of the object that is passed.</p>
-          <h4>Functions.translate(object, translateX, translateY)</h4>
+          <h3>Functions.translate(object, translateX, translateY)</h3>
           <p>Translates the <ilcode>centerX</ilcode> and <ilcode>centerY</ilcode> of the object that is passed.</p>
-          <h4>Functions.rotate(object, degrees, origin="object_Center", originX=None, originY=None)</h4>
-          <p>Rotates the object that is passed based on an origin.</p>
-          <h5>Possible Origins</h5>
+          <h3>Functions.rotate(object, degrees, origin="object_Center", originX=None, originY=None)</h4>
+          <p>Rotates the object that is passed by an amount in degrees.</p>
+          <h4>Possible Origins</h4>
           <table>
             <tr>
               <th>Origin</th>
@@ -231,12 +231,81 @@ debu = False, **kwargs)</code></pre>
             </tr>
             <tr>
               <td>"origin_Custom"</td>
-              <td>A custom coordinate to rotate the object around.</td>
+              <td>A custom coordinate to rotate the object around. The origin is determined by <ilcode>originX</ilcode> and <ilcode>originY</ilcode></td>
             </tr>
           </table>
+          <h3>Functions.hover(object, mode="darken", darkenModAmount=0.9, lightenModAmount=1.1)</h3>
+          <h4>object</h4>
+          <p>Either a <ilcode>Menu</ilcode> or <ilcode>Menu.Button</ilcode> object. This objects 
+          <ilcode>fill</ilcode> and <ilcdoe>border</ilcdoe> properties must be rgb values. Passing 
+          an object with a gradient or string color value will raise an error.</p>
+          <h4>mode</h4>
+          <p>Whether to darken or lighten the object on hover. Possible values are <ilcdoe>"darken"</ilcdoe> 
+          and <ilcode>"lighten"</ilcode>.</p>
+          <h4>darkenModAmount</h4>
+          <p>How much darker to make the object on hover.</p>
+          <h4>lighenModAmount</h4>
+          <p>How much lighter to make the object on hover.</p>
+          <h3>Implementing Hover</h3>
+          <p><ilcode>Functions.hover</ilcode></p>
+          <h4>Example</h4>
+          <p>In its current state, <ilcode>Functions.hover</ilcode> requires a lot of boilerplate code
+          to function. This function only modifies the <ilcdoe>fill</ilcdoe> and <ilcode>border</ilcode> properties
+          of the button.</p>
+          <pre><code data-language="python" style="font-size:14px;">from cmu_graphcis import *
+
+app.hovering = 0
+
+# rest of your code
+
+exampleMenu = Menu(
+  0, 0,
+  133, 400,
+  fill=rgb(70,70,70),
+  border=rgb(20,20,20),
+  borderWidth=5
+)
+
+exampleButton = Menu.Button(
+  exampleMenu,
+  -30, 20,
+  55, 20,
+  fill=Colors.CSS3.slategray,
+  border=Colors.CSS3.darkslategray,
+  textValue="Example",
+)
+exampleButtonData = exampleButton.getData()
+
+def onMouseMove(x, y):
+  if exampleButton.contains(x, y):
+    app.hovering += 1
+    Functions.hover(exampleButton, mode="lighen", lighenModAmount=1.3)
+  else:
+    exampleButton.fill = rgb(*exampleButtonData["BoundingBox"]["BackgroundFill"])
+    exampleButton.border = rgb(*exampleButtonData["BoundingBox"]["BorderFill"])
+    app.hovering = 0
+
+cmu_graphics.run()</code></pre>
+          <h4>Explanation</h4>
+          <p><ilcode>Functions.hover</ilcode> uses an <ilcdoe>app</ilcdoe> variable called <ilcode>hovering</ilcode>. 
+          When the button is hovered over, the <ilcdoe>hovering</ilcdoe> varaible is increased, telling 
+          the function that something is being hovered. Then, the function makes the <ilcdoe>fill</ilcdoe> and <ilcode>border</ilcode> 
+          ligher. In the <ilcode>else</ilcode> block, we set the modified properties back to their 
+          original state and tell the app that the button is no longer being hovered.</p>
+          <br><br>
+          <p><strong>Note</strong>: the star (*) is Pythons <a href="https://www.geeksforgeeks.org/python/packing-and-unpacking-arguments-in-python/" target="_blank">unpacking operator</a>.
+          Essentially, it turns an iterable (like a list or tuple) into its individual elements like this:</p>
+          <pre><code data-language="python" style="font-size:14px;">myAwesomeColor = rgb(45, 90, 135)
+myAwesomeColor_red, myAwesomeColor_green, myAwesomeColor_blue = *myAwesomeColor
+print(f"red: {myAwesomeColor_red}\ngreen: {myAwesomeColor_green}\nblue: {myAwesomeColor_blue}")
+# output
+# red: 45
+# green: 90
+# blue: 135</code></pre>
           <hr>
           <h2 id="classes-colors">Colors</h2>
-          <p>Colors are accessed like this: <ilcode>Colors.COLOR_NAME</ilcode>. So, to access the gray color, you would do <ilcode>Colors.gray</ilcode>.</p>
+          <p>Colors are accessed like this: <ilcode>Colors.COLOR_NAME</ilcode>. So, to access the 
+          gray color, you would do <ilcode>Colors.gray</ilcode>.</p>
           <br>
           <button type="button" class="collapsible">Toggle Colors</button>
           <div class="content">

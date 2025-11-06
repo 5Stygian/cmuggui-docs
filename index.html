@@ -291,7 +291,7 @@ cmu_graphics.run()</code></pre>
           ligher. In the <ilcode>else</ilcode> block, we set the modified properties back to their 
           original state and tell the app that the button is no longer being hovered.</p>
           <br>
-          <p><strong>Note</strong>: the star (*) is Pythons <a href="https://www.geeksforgeeks.org/python/packing-and-unpacking-arguments-in-python/" target="_blank">unpacking operator</a>.
+          <p><strong>Note</strong>: the star (*) is the Python <a href="https://www.geeksforgeeks.org/python/packing-and-unpacking-arguments-in-python/" target="_blank">unpacking operator</a>.
           Essentially, it turns an iterable (like a list or tuple) into its individual elements like this:</p>
           <pre><code data-language="python" style="font-size:14px;">myAwesomeColor = rgb(45, 90, 135)
 myAwesomeColor_red, myAwesomeColor_green, myAwesomeColor_blue = *myAwesomeColor
@@ -370,6 +370,8 @@ print(f"red: {myAwesomeColor_red}\ngreen: {myAwesomeColor_green}\nblue: {myAweso
           <pre><code data-language="python" style="font-size:14px;">from cmu_graphcs import *
 from cmuggui import *
 
+app.hovering = 0
+
 def start():
   print("program started")
 
@@ -387,7 +389,8 @@ exampleButton = Menu.Button(
   40, 30,
   textValue="Play"
 )
-
+exampleButtonData = exampleButton.getData()
+           
 quitButton = Menu.Button(
   exampleMenu,
   -10, 365,
@@ -395,10 +398,27 @@ quitButton = Menu.Button(
   textValue="Quit",
   textSize=10
 )
+quitButtonData = quitButton.getData()
 
 def onMousePress(x, y):
   exampleButton.addEventListener(x, y, onclick=start)
   quitButton.addEventListener(x, y, onclick=Functions.QUIT)
+
+def onMouseMove(x, y):
+  if exampleButton.contains(x, y):
+    app.hovering += 1
+    Functions.hover(exampleButton)
+  elif quitButton.contains(x, y):
+    app.hovering += 1
+    Functions.hover(quitButton)
+  else:
+    exampleButton.fill = rgb(*exampleButtonData["BoundingBox"]["BackgroundFill"])
+    exampleButton.border = rgb(*exampleButtonData["BoundingBox"]["BorderFill"])
+
+    quitButton.fill = rgb(*quitButtonData["BoundingBox"]["BackgroundFill"])
+    quitButton.border = rgb(*quitButtonData["BoundingBox"]["BorderFill"])
+    
+    app.hovering = 0
 
 cmu_graphics.run()</code></pre>
           <br><br>

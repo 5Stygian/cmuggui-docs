@@ -162,9 +162,20 @@ ilcode {
   border: 1px solid rgb(120,120,120);
   margin: 20px 20px 0 0;
   padding: 8px;
+  width: 40px;
+  height: 40px;
   top: 20px;
   right: 20px;
   position: sticky;
   float: right;
   text-align: center;
+}
+
+#totop a,
+#totop a:link,
+#totop a:visited,
+#totop a:hover,
+#totop a:active {
+  color: white;
+  text-decoration: none;
 }

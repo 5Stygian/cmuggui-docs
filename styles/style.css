@@ -49,8 +49,6 @@ ilcode {
 .mainContainer .sidebar ul {
   padding: 10px 0;
   list-style-type: none;
-  top: 0;
-  left: 0;
   position: sticky;
 }
 

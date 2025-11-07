@@ -169,7 +169,7 @@ ilcode {
   float: right;
   text-align: center;
   font-family: 'jetbrains mono';
-  font-size: 18px;
+  font-size: 20px;
 }
 
 #totop a,
@@ -177,6 +177,6 @@ ilcode {
 #totop a:visited,
 #totop a:hover,
 #totop a:active {
-  color: rgb(200,200,200);
+  color: rgb(215,215,215);
   text-decoration: none;
 }

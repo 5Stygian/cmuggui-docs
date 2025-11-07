@@ -157,10 +157,11 @@ ilcode {
 
 /* to top */
 #totop {
-  color: rgb(235,235,235);
+  color: rgb(200,200,200);
   background-color: rgb(70,70,70);
   border: 1px solid rgb(120,120,120);
   margin: 20px 20px 0 0;
+  padding: 8px;
   top: 20px;
   right: 20px;
   position: sticky;

@@ -12,3 +12,9 @@ for (let i = 0; i < coll.length; i++) {
     }
   });
 }
+
+const totop = document.getElementById("totop");
+
+totop.addEventListener("click", function() {
+  window.location.replace("https://cmuggui-docs.netlify.app/#introduction");
+});

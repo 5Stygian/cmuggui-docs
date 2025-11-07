@@ -159,16 +159,17 @@ ilcode {
 #totop {
   color: rgb(200,200,200);
   background-color: rgb(70,70,70);
-  border: 1px solid rgb(120,120,120);
+  border: 3px solid rgb(120,120,120);
   margin: 20px 20px 0 0;
   padding: 8px;
-  width: 40px;
-  height: 40px;
+  width: 20px;
+  height: 20px;
   top: 20px;
   right: 20px;
   position: sticky;
   float: right;
   text-align: center;
+  font-family: 'jetbrains mono';
 }
 
 #totop a,

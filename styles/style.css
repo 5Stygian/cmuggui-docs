@@ -170,6 +170,9 @@ ilcode {
   text-align: center;
   font-family: 'jetbrains mono';
   font-size: 20px;
+  color: rgb(215,215,215);
+  text-decoration: none;
+  font-weight: bolder;
 }
 
 #totop a,

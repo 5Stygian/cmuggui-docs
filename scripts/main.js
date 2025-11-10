@@ -1,3 +1,8 @@
+const currentURL = window.location.href;
+if (currentURL == "https://cmuggui-docs.netlify.app/" || currentURL == "https://cmuggui-docs.netlify.app") {
+  window.location.replace("https://cmuggui-docs.netlify.app/#introduction");
+}
+
 // this code is from W3
 const coll = document.getElementsByClassName("collapsible");
 

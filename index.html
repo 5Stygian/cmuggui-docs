@@ -126,6 +126,50 @@ debu = False, **kwargs)</code></pre>
           <p>When True, lines are drawn that show alignment and where the border is. This is useful if 
           <ilcode>fill</ilcode> and <ilcode>border</ilcode> are invisible, or you need guidelines to help align elements. 
           This also automatically calls the <ilcode>getData()</ilcode> method.</p>
+          <h3>Attributes</h3>
+          <p>Since <ilcdoe>Menu.Button</ilcdoe> subclasses <ilcode>Rect</ilcode>, it 
+          has all of the attributes a normal <ilcode>Rect</ilcode> would normally have.</p>
+          <h4>parent</h4>
+          <p>The parent <ilcode>Menu</ilcode> of the button.</p>
+          <h4>onclick</h4>
+          <p>The function the button is assigned to.</p>
+          <h4>hasEventListener</h4>
+          <p>Whether the button has an event listener or not.</p>
+          <h4>text</h4>
+          <p>A <ilcode>Label</ilcode> object. This is the text that is displayed on the button.</p>
+          <h4>textValue</h4>
+          <p>The value of the text that is displayed on the button.</p>
+          <h4>textFill</h4>
+          <p>The color of the text.</p>
+          <h4>textSize</h4>
+          <p>The size of the text.</p>
+          <h4>textFont</h4>
+          <p>The font of the text.</p>
+          <h4>textIsBold</h4>
+          <p>Whether or not the text is bold.</p>
+          <h4>textIsItalic</h4>
+          <p>Whether or not the text is italic.</p>
+          <h4>textIsVisible</h4>
+          <p>Whether or not the text is visible.</p>
+          <h4>textOpacity</h4>
+          <p>The opacity of the text.</p>
+          <h4>debug</h4>
+          <p>Whether or not debug mode is enabled.</p>
+          <button type="button" class="collapsible">Toggle debug specific attributes</button>
+          <div class="content">
+            <h4>dbNS</h4>
+            <p>The line that runs from the center top to the center bottom of the button.</p>
+            <h4>dbEW</h4>
+            <p>The line that runs from the center left to the center bottom of the button.</p>
+            <h4>dbNWSE</h4>
+            <p>The line that runs from the top left corner to the bottom right corner of the button.</p>
+            <h4>dbNESW</h4>
+            <p>The line that runs from the top right corder to the bottom left corner of the button.</p>
+            <h4>dbBorder</h4>
+            <p>The border of the button.</p>
+          </div>
+          <h4>data</h4>
+          <p>A dictionary containing all the data of the button.</p>
           <h3>Methods</h3>
           <h4>getData()</h4>
           <p>Returns a <ilcode>Dict</ilcode> containing data about the object.</p>

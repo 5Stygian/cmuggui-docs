@@ -297,7 +297,7 @@ debu = False, **kwargs)</code></pre>
               <td>A custom coordinate to rotate the object around. The origin is determined by <ilcode>originX</ilcode> and <ilcode>originY</ilcode></td>
             </tr>
           </table>
-          <h3>Functions.hover(object, mode="darken", darkenModAmount=0.9, lightenModAmount=1.1)</h3>
+          <h3>Functions.hover(object, mode="darken", darkenModAmount=0.9, lightenModAmount=1.1, hoverFill=True, hoverBorder=True, hoverText=True)</h3>
           <h4>object</h4>
           <p>Either a <ilcode>Menu</ilcode> or <ilcode>Menu.Button</ilcode> object. This objects 
           <ilcode>fill</ilcode> and <ilcdoe>border</ilcdoe> properties must be rgb values. Passing 
@@ -309,6 +309,12 @@ debu = False, **kwargs)</code></pre>
           <p>How much darker to make the object on hover.</p>
           <h4>lighenModAmount</h4>
           <p>How much lighter to make the object on hover.</p>
+          <h4>hoverFill</h4>
+          <p>Whether or not the background color should be effected.</p>
+          <h4>hoverBorder</h4>
+          <p>Whether or not the border color should be effected.</p>
+          <h4>hoverText</h4>
+          <p>Whether or not the text color should be effected.</p>
           <h3>Implementing Hover</h3>
           <h4>Example</h4>
           <p>In its current state, <ilcode>Functions.hover</ilcode> requires a lot of boilerplate code

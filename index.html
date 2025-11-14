@@ -51,18 +51,22 @@
           <hr>
           <h1 id="classes">Classes</h1>
           <h2 id="classes-menu">Menu</h2>
-          <pre><code data-language="python" style="font-size:14px;">Menu(*args, fill=Colors.gray, border=Colors.darkerGray, borderWidth=2, debug: bool = False, **kwargs):</code></pre>
+          <pre><code data-language="python" style="font-size:14px;">Menu(*args, fill=Colors.gray, border=Colors.darkerGray, borderWidth=2, parent = None, debug: bool = False, **kwargs):</code></pre>
           <p>The <ilcode>Menu</ilcode> class subclasses the <ilcode>Rect</ilcode> class from CMU Graphics. 
           This means that normal <ilcode>Rect</ilcode> arguments like <ilcode>left</ilcode> and <ilcode>top</ilcode> 
           are still passed.</p>
           <h3>Keyword Arguments</h3>
           <p>The keyword arguments seen in the definition (aside from debug) are the default styles for Menu objects.</p>
+          <h4>parent</h4>
+          <p>A <ilcode>Menu</ilcode> object.</p>
           <h4>debug</h4>
           <p>When True, lines are drawn that show alignment and where the border is. This is useful if 
           <ilcode>fill</ilcode> and <ilcode>border</ilcode> are invisible, or you need guidelines to help align elements. 
           This also automatically calls the <ilcode>getData()</ilcode> method.</p>
           <h3>Attributes</h3>
           <p>Since <ilcode>Menu</ilcode> subclasses <ilcode>Rect</ilcode>, it has all the attributes a regular <ilcode>Rect</ilcode>.</p>
+          <h4>parent</h4>
+          <p>The <ilcode>Rect</ilcode> of the parent. This will be <ilcode>None</ilcode> if no parent is passed.</p>
           <h4>debug</h4>
           <p>Whether or not debug mode is enabled.</p>
           <button type="button" class="collapsible">Toggle debug specific attributes</button>
@@ -89,6 +93,7 @@
             <br>
             <pre><code data-language="json" style="font-size:14px;">{
     "Class": f"{self.__class__.__name__}",
+    "Parent": f"{self.parent}",
     "Debug": self.debug,
     "Dimensions": {
         "TopLeft": (self.left, self.top),

@@ -266,6 +266,39 @@ debu = False, **kwargs)</code></pre>
           <h4>*args, **kwargs</h4>
           <p>Since this class subclasses <ilcode>Label</ilcode>, it has all the regular <ilcode>*args</ilcode> and <ilcode>**kwargs</ilcode> 
           of a regular <ilcode>Label</ilcode>.</p>
+          <h3>Attributes</h3>
+          <p>Since this class subclasses <ilcode>Label</ilcode>, it has all the regular attributes of a <ilcode>Label</ilcode>.</p>
+          <h4>parent</h4>
+          <p>The <ilcode>Rect</ilcode> of the parent. This will be <ilcode>None</ilcode> if no parent is passed.</p>
+          <h3>Methods</h3>
+          <h4>getData()</h4>
+          <p>Returns the <ilcode>data</ilcode> attribute.</p>
+          <button type="button" class="collapsible">Toggle data structure</button>
+          <div class="content">
+            <pre><code data-language="python" style="font-size:14px;">{
+    "Class": f"{self.__class__.__name__}",
+    "Parent": f"{self.parent}",
+    "Dimensions": {
+        "TopLeft": (self.left, self.top),
+        "TopRight": (self.right, self.top),
+        "BottomLeft": (self.left, self.bottom),
+        "BottomRight": (self.right, self.bottom),
+        "Width": self.width,
+        "Height": self.height,
+        "Center": (self.centerX, self.centerY)
+    },
+    "Color": self.fill,
+    "Value": self.value,
+    "Fill": self.fill,
+    "Font": self.font,
+    "Size": self.size,
+    "IsBold": self.bold,
+    "IsItalic": self.italic,
+    "Opacity": self.opacity,
+    "IsVisible": self.visible
+}
+            </code></pre>
+          </div>
           <hr>
           <h2 id="classes-functions">Functions</h2>
           <p>This class defines utiity functions.</p>

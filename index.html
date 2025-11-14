@@ -31,6 +31,7 @@
             <li><a href="#classes">Classes</a></li>
             <li><a href="#classes-menu">Menu</a></li>
             <li><a href="#classes-menu-button">Menu.Button</a></li>
+            <li><a href="#classes-menu-title">Menu.Title</a></li>
             <hr>
             <li><a href="#classes-functions">Functions</a></li>
             <hr>
@@ -256,6 +257,15 @@ debu = False, **kwargs)</code></pre>
           <h3>Example Implementation</h3>
           <pre><code data-language="python" style="font-size:14px;">def onMousePress(x, y):
   buttonObject.addEventListener(x, y, onclick=FUNC_TO_CALL)</code></pre>
+          <h2 id="classes-menu-title">Menu.Title</h2>
+          <pre><code data-language="python" style="font-size:14px;">Menu.Title(parent, *args, **kwargs)</code></pre>
+          Titles, like buttons, are automatically aligned to the center of thier parent menu.
+          <h3>Arguments</h3>
+          <h4>parent</h4>
+          <p>A <ilcode>Menu</ilcode> object.</p>
+          <h4>*args, **kwargs</h4>
+          <p>Since this class subclasses <ilcode>Label</ilcode>, it has all the regular <ilcode>*args</ilcode> and <ilcode>**kwargs</ilcode> 
+          of a regular <ilcode>Label</ilcode>.</p>
           <hr>
           <h2 id="classes-functions">Functions</h2>
           <p>This class defines utiity functions.</p>

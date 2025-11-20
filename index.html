@@ -32,6 +32,7 @@
             <li><a href="#classes-menu">Menu</a></li>
             <li><a href="#classes-menu-button">Menu.Button</a></li>
             <li><a href="#classes-menu-title">Menu.Title</a></li>
+            <li><a href="#classes-verticaltitle">VerticalTitle</a></li>
             <hr>
             <li><a href="#classes-functions">Functions</a></li>
             <hr>
@@ -303,6 +304,39 @@ debu = False, **kwargs)</code></pre>
     "IsVisible": self.visible
 }
             </code></pre>
+          </div>
+          <h2 id="classes-verticaltitle">VerticalTitle</h2>
+          <pre><code data-language="python" style="font-size:14px;">VerticalTitle(*args, spacing=0, **kwargs)</code></pre>
+          <p>A title, except written vertically instead of horrizontally. Each character is its own <ilcode>Menu.Title</ilcode>.</p>
+          <h3>Arguments</h3>
+          <h4>*args, **kwargs</h4>
+          <p>Since this class subclasses <ilcode>Menu.Title</ilcode>, it takes all the regular <ilcode>*args</ilcode> and <ilcode>**kwargs</ilcode>.</p>
+          <h4>spacing</h4>
+          <p>How far apart each letter should be spaced vertically.</p>
+          <h3>Attributes</h3>
+          <h4>spacing</h4>
+          <p>How far apart each letter is spaced vertically.</p>
+          <h4>chars</h4>
+          <p>A CMU Graphics <ilcode>Group</ilcode> object that contains each character in the title.</p>
+          <h4>data</h4>
+          <p>A <ilcode>dict</ilcode> that contains data about the object.</p>
+          <h3>Methods</h3>
+          <h4>getData()</h4>
+          <p>Returns the <ilcode>data</ilcode> attribute of the object.</p>
+          <button type="button" class="collapsible">Toggle data structure</button>
+          <div class="content">
+            <pre><code data-language="python" style="font-size:14px;">{
+  "Class": f"{self.__class__.__name__}",
+  "Parent": f"{self.parent}",
+  "Position": (self.chars.centerX, self.chars.centerY),
+  "Color": f"{self.fill}",
+  "Font": self.font,
+  "Size": self.size,
+  "IsBold": self.bold,
+  "IsItalic": self.italic,
+  "Opacity": self.opacity,
+  "IsVisible": self.visible
+}</code></pre>
           </div>
           <hr>
           <h2 id="classes-functions">Functions</h2>

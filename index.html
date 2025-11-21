@@ -73,6 +73,10 @@
           of type <ilcode>List</ilcode>, so they can be accessed with bracket notation.</p>
           <h4>parent</h4>
           <p>The <ilcode>Rect</ilcode> of the parent. This will be <ilcode>None</ilcode> if no parent is passed.</p>
+          <h4>buttons</h4>
+          <p>A list of all the buttons that are children of this menu.</p>
+          <h4>buttonsData</h4>
+          <p>A list of all of the buttons <ilcode>data</ilcode> attribute.</p>
           <h4>debug</h4>
           <p>Whether or not debug mode is enabled.</p>
           <button type="button" class="collapsible">Toggle debug specific attributes</button>
@@ -113,14 +117,39 @@
     "BackgroundFill": self.fill,
     "BorderFill": self.border,
     "BorderWidth": self.borderWidth,
-    "IsVisible": self.visible
+    "IsVisible": self.visible,
+    "Buttons": self.buttonsData
 }</code></pre>
           </div>
+          <h4>addEventListener(x, y)</h4>
+          <p>Event listeners are created inside of the <ilcode>onMousePress</ilcode> built in function.</p>
+          <pre><code data-language="python" style="font-size:14px">menuObject = Menu(
+    0, 0,
+    133, 400
+)
+
+buttonObject = Menu.Button(
+    menuObject,
+    0, 15,
+    50, 20,
+    onclick=Functions.QQUIT,
+    fill=Colors.CSS3.slategray,
+    border=Colors.CSS3.black,
+    borderWidth=4
+)
+
+def onMousePress(x, y):
+    menuObject.addEventListener(x, y)
+          </code></pre>
+          <p>When the button is clicked, its <ilcode>onclick</ilcode> property is called.</p>
+          <h4>Differences from Menu.Button.addEventListener</h4>
+          <p>When this version of the event listener is called, it loops through all of the child buttons of the menu and checks to see if the 
+          clicks coordinates collides with the button.</p>
           <h2 id="classes-menu-button">Menu.Button</h2>
           <pre><code data-language="python" style="font-size:14px;">Menu.Button(parent, *args, 
 textValue = "", textFill = rgb(0,0,0), textSize = 12.0, textFont = "arial", textOpacity = 100,
 textIsBold = False, textIsItalic = False, textIsVisible = True,
-debu = False, **kwargs)</code></pre>
+onclick = None, debug = False, **kwargs)</code></pre>
           <p>Buttons are automatically aligned to the center of their parent Menu.</p>
           <h3>Arguments</h3>
           <h4>parent</h4>
@@ -152,6 +181,9 @@ debu = False, **kwargs)</code></pre>
           <p>The opacity of the text.</p>
           <h4>textIsVisible</h4>
           <p>Whether or not the text should be visible.</p>
+          <h4>onclick</h4>
+          <p>The name of a function. Called when the parent menu has an event listener. Passing the name of the function with 
+          parenthesis will call the function (<ilcode>foo()</ilcode> instead of <ilcode>foo</ilcode>).</p>
           <h4>debug</h4>
           <p>When True, lines are drawn that show alignment and where the border is. This is useful if 
           <ilcode>fill</ilcode> and <ilcode>border</ilcode> are invisible, or you need guidelines to help align elements. 
@@ -251,20 +283,17 @@ debu = False, **kwargs)</code></pre>
 }</code></pre>
           </div>
           <h3>Event Listeners</h3>
-          <pre><code data-language="python" style="font-size:14px;">addEventListener(x, y, onclick = None, event = "mouseDown")</code></pre>
+          <pre><code data-language="python" style="font-size:14px;">addEventListener(x, y)</code></pre>
           <p>Event listeners are defined inside of the <ilcode>onMousePress</ilcode> function from CMU Graphics.
-          When an event listener is defined, they must take <ilcode>x</ilcode> and <ilcode>y</ilcode> as arguments. Do 
-          not pass anything for the <ilcode>event</ilcode> argument. It will cause an error. An example is shown below.</p>
-          <h3>Arguments</h3>
-          <h4>onclick</h4>
-          <p>The name of a function without parenthesis. Adding parenthesis to the function will call the function.
-          If no function is passed, it will raise a <ilcode>TypeError</ilcode>.</p>
+          When an event listener is defined, they must take <ilcode>x</ilcode> and <ilcode>y</ilcode> as arguments. An example is shown below.</p>
           <h3>Example Implementation</h3>
           <pre><code data-language="python" style="font-size:14px;">def onMousePress(x, y):
-  buttonObject.addEventListener(x, y, onclick=FUNC_TO_CALL)</code></pre>
+  buttonObject.addEventListener(x, y)</code></pre>
+          <h4>Differences between Menu.addEventListener</h4>
+          <p>This version of the event listener only checks to see if a specifc button has beed collided with.</p>
           <h2 id="classes-menu-title">Menu.Title</h2>
           <pre><code data-language="python" style="font-size:14px;">Menu.Title(parent, *args, **kwargs)</code></pre>
-          Titles, like buttons, are automatically aligned to the center of thier parent menu.
+          Titles, like buttons, are automatically aligned to the center of their parent menu.
           <h3>Arguments</h3>
           <h4>parent</h4>
           <p>A <ilcode>Menu</ilcode> object.</p>

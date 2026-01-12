@@ -33,6 +33,7 @@
             <li><a href="#classes-menu-button">Menu.Button</a></li>
             <li><a href="#classes-menu-title">Menu.Title</a></li>
             <li><a href="#classes-verticaltitle">VerticalTitle</a></li>
+            <li><a href="#classes-titledmenu">TitledMenu</a></li>
             <hr>
             <li><a href="#classes-functions">Functions</a></li>
             <hr>
@@ -368,6 +369,44 @@ onclick = None, debug = False, **kwargs)</code></pre>
   "IsVisible": self.visible
 }</code></pre>
           </div>
+          <h2 id="classes-titledmenu">TitledMenu</h2>
+          <pre><code data-language="python" style="font-size:14px;">TitledMenu(titleValue, titleXAlign, titleYAlign, *args, titleSize=15, bold=True, **kwargs)</code></pre>
+          <p>A menu with a title. The title you get from this class is less customizable than the regular <ilcode>Menu.Title</ilcode> in the constuctor. 
+          So, you must edit it's properties using dot syntax.</p>
+          <h3>Arguments</h3>
+          <h4>titleValue</h4>
+          <p>The text the title will be of.</p>
+          <h4>titleXAlign</h4>
+          <p>How the title is aligned on the x axis.</p>
+          <h4>titleYAlign</h4>
+          <p>How the title is aligned on the y axis.</p>
+          <h4>*args</h4>
+          <p>The <ilcode>*args</ilcode> for the <ilcode>Menu</ilcode> class.</p>
+          <h3>Keyword Arguments</h3>
+          <h4>titleSize</h4>
+          <p>The size of the title.</p>
+          <h4>bold</h4>
+          <p>Whether or not the title should be bold.</p>
+          <h4>**kwargs</h4>
+          <p>The regular <ilcode>**kwargs</ilcode> for the <ilcode>Menu</ilcode> class.</p>
+          <h3>Attributes</h3>
+          <h4>titleValue</h4>
+          <p>The text the title will be of.</p>
+          <h4>titleXAlign</h4>
+          <p>How the title is aligned on the x axis.</p>
+          <h4>titleYAlign</h4>
+          <p>How the title is aligned on the y axis.</p>
+          <h4>*args</h4>
+          <p>The <ilcode>*args</ilcode> for the <ilcode>Menu</ilcode> class.</p>
+          <h3>Keyword Arguments</h3>
+          <h4>titleSize</h4>
+          <p>The size of the title.</p>
+          <h4>bold</h4>
+          <p>Whether or not the title should be bold.</p>
+          <h4>title</h4>
+          <p>The title on the menu.</p>
+          <h4>dividerLine</h4>
+          <p>The divider line below the title.</p>
           <hr>
           <h2 id="classes-functions">Functions</h2>
           <p>This class defines utiity functions. You do not need to create an object of this class to use its methods.</p>
